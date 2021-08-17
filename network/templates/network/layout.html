@@ -60,7 +60,7 @@
                     {% block body %}
                     {% endblock %}
                     <br/><br/>
-
+                    {% if page_obj %}
                     {% for post in page_obj %}
                     
                     <article class="media content-section shadow-lg p-3 mb-5 bg-white rounded">
@@ -132,6 +132,7 @@
                     {% empty %}
                         <h2><i>No posts</i></h2>
                 {% endfor %}
+                {% endif %}
             </div>
                 
 
